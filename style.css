@@ -1,0 +1,329 @@
+body{
+  background: #8CC461;
+}
+
+.container{
+  display: flex;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  overflow: auto;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .box{
+    width: 60vw;
+    height: 140px;
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .textbox{
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    width: 240px;
+  }
+
+  .rightside {
+    display: flex;
+  }
+
+  .main{
+    height: calc(100vh - 250px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .score{
+    background: white;
+    color: dimgray;
+    width: 114px;
+    margin-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 6px;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .score span{
+    font-size: 68px;
+  }
+
+
+  .play-game{
+    position: relative;
+    height: 200px;
+    width: 200px;
+  }
+
+  .game-button{
+    position: absolute;
+    background: white;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px 1px 11px 0px #00000059;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+  }
+
+  .game-button img{
+    transition: ease-in-out 0.3s;
+  }
+
+  .game-button:hover{
+    border-width: 8px;
+    height: 125px;
+    width: 125px;
+    box-shadow: none;
+  }
+  .game-button:hover img{
+    transform: scale(1.0);
+  }
+
+  .rock{
+    left: -107px;
+    border: 16px solid #0074B6;
+    z-index: 1;
+  }
+
+  .scissor{
+    right: -108px;
+    border: 16px solid #BD00FF;
+    z-index: 1;
+  }
+
+  .paper{
+    left: 29px;
+    top: 205px;
+    border: 16px solid #FFA943;
+    z-index: 1;
+  }
+
+  .line-1{
+    position: absolute;
+    top: 60px;
+    left: 34px;
+  }
+
+  .line-3{
+    position: absolute;
+    z-index: 0;
+    top: 121px;
+  }
+
+  .line-2{
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    top: 121px;
+  }
+
+ .game-result{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  align-items: center;
+ }
+
+ .game-result-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+  .game-result-button{
+    background: white;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -1px 1px 11px 0px #00000059;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+  }
+
+  .game-result-rock{
+    border: 16px solid #0074B6;
+  }
+
+  .game-result-scissor{
+    border: 16px solid #BD00FF;
+  }
+
+  .game-result-paper{
+    border: 16px solid #FFA943;
+  }
+
+  .win-message{
+    font-size: 30px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+  }
+
+  .win-message-info{
+    font-size: 20px;
+    margin-top: 5px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+
+  .win-message-btn button{
+    
+    margin-top: 15px;
+    background: white;
+    font-size: 15px;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .win-message-btn button:hover{
+    transition: ease-in-out 0.3s;
+    transform: scale(1.0);
+    background: none;
+    border: solid 2px white;
+    color: white;
+    cursor: pointer;
+  }
+
+  .win-game{
+    position: relative;
+  }
+
+  .win-game::before{
+    content: "";
+    position: absolute;
+    background: #20992cc9;
+    width: 165%;
+    height: 165%;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  .win-game::after{
+    content: "";
+    position: absolute;
+    background: #1DA82BC9;
+    width: 190%;
+    height: 190%;
+    border-radius: 50%;
+    z-index: -2;
+  }
+  .win-game span{
+    position: absolute;
+    background: #2E9A2563;
+    width: 220%;
+    height: 220%;
+    border-radius: 50%;
+    z-index: -2;
+  }
+
+
+
+
+  .rules-btn-list{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+  }
+
+.rules-btn-list button{
+  background: none;
+  border: solid 2px white;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.rules-btn-list button:hover{
+    transition: ease-in-out 0.3s;
+    transform: scale(1.1);
+    background: white;
+    color: black;
+  
+}
+
+.rules-list{
+  position: fixed;
+  top: 25%;
+  right: 10px;
+  animation: moveleft forwards 1s;
+}
+.rules-list span{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  right: 0px;
+  top: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@keyframes moveleft {
+  0%{
+    right: 0;
+  }
+  100%{
+    right: 10px;
+  }
+}
+
+.hurrah-container{
+  margin: 70px 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.hurrah-img{
+  position: relative;
+
+}
+
+.cup-img{
+  position: absolute;
+  top: 100px;
+  left: 166px;
+}
+
+.star-img{
+  margin: 0;
+}
+
+.hurrah-msg{
+  text-align: center;
+  color: white;
+  font-family: sans-serif;
+  margin-top: 25px;
+}
+
+.hurrah-won{
+  font-size: 88px;
+}
+
+.hurrah-won-text{
+  font-size: 40px;
+}

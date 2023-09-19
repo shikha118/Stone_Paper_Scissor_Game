@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAME</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container" id="game-container">
+      <div class="box">
+        <div class="leftside">
+          <div class="textbox">ROCK PAPER SCISSOR</div>
+        </div>
+        <div class="rightside">
+          <div class="score">COMPUTER SCORE
+            <span id="computer-score">0</span>
+          </div>
+          <div class="score">YOUR SCORE
+            <span id="player-score">0</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="main" id="main-container">
+        <div class="play-game">
+          <div class="rock game-button" onclick="clickedValue('rock')">
+            <img src="./images/rock.png" alt="rock">
+          </div>
+          <div class="paper game-button" onclick="clickedValue('paper')">
+            <img src="./images/paper.png" alt="paper">
+          </div>
+          <div class="scissor game-button" onclick="clickedValue('scissor')">
+            <img src="./images/scissor.png" alt="scissor">
+          </div>
+          <div class="line-1">
+            <img src="./images/Line 1.png">
+          </div>
+          <div class="line-2">
+            <img src="./images/Line 2.png">
+          </div>
+          <div class="line-3">
+            <img src="./images/Line 3.png">
+          </div>
+        </div>
+        <!-- <div class="game-result">
+          <div class="game-result-left">
+            <div class="game-result-button game-result-rock">
+              <img src="/images/rock.png" alt="rock">
+              <span></span>
+            </div>
+          </div>
+          <div class="game-result-center">
+            <div class="win-message">YOU WIN</div>
+            <div class="win-message-info" id="win-message">AGAINST PC</div>
+            <div class="win-message-btn">
+              <button><span id="win-message-btn">Play Again</span></button>
+            </div>
+          </div>
+          <div class="game-result-right">
+            <div class="game-result-button game-result-scissor">
+              <img src="/images/scissor.png" alt="scissor">
+              <span></span>
+            </div>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- <div class="hurrah-container">
+        <div class="hurrah-img">
+          <img class="cup-img" src="/images/cup.jpg">
+          <img class="start-img" src="/images/star.jpg">
+        </div>
+        <div class="hurrah-msg">
+          <div class="hurrah-won">HURRAY!!</div>
+          <div class="hurrah-won-text">YOU WON THE GAME</div>
+          <div class="hurrah-won-btn">
+            <div class="win-message-btn">
+              <button><span id="win-message-btn" onclick="restartGame()">PLAY AGAIN</span></button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div id="rules-container">
+    </div>
+    <div class="rules-btn-list" id="button-manage-container">
+      <button onclick="showRules()">Rules</button>
+      <!-- <button onclick="hurrayShow()">NEXT</button> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
